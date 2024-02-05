@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+
+        }
+
+
+body{ background-image: url(mk.jpg);
+          background-repeat: no-repeat;
+        background-size: 100vw;
+        
+        background-color: rgb(38, 38, 38);
+    }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            transition: .3s ease-in-out;
+            gap: 8vh;
+            background-color: black;
+            position: sticky;
+            top: 0%;
+            padding: .5vw 0vw;
+            z-index: 15;
+
+        }
+
+
+        nav:hover {
+            background-color: rgb(0, 0, 0);
+        }
+
+
+        .right ul {
+            display: flex;
+            gap: 50px;
+        }
+
+        .right ul li {
+            list-style: none;
+            font-size: 13px;
+        }
+
+
+
+        .right a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bolder;
+            position: relative;
+            letter-spacing: 1px;
+            padding: 15px 1px;
+            transition: 0.2s ease-in-out;
+
+        }
+
+        .right a:hover {
+            color: rgb(255, 43, 43);
+        }
+
+        .right a::before {
+            content: "";
+            position: absolute;
+
+            bottom: 0%;
+
+            height: 1.5px;
+            background-color: rgb(255, 43, 43);
+
+        }
+
+        .right a:hover:before {
+            width: 100%;
+        }
+
+
+        .logo img {
+            padding-top: 5px;
+        }
+
+
+
+        .icon ul {
+            display: flex;
+
+            gap: 2vw;
+        }
+
+        .icon ul li {
+            list-style: none;
+        }
+
+        .icon ul li img {
+            height: 4vh;
+
+
+        }
+
+
+
+
+        .container {
+
+            display: flex;
+            padding: 0 6vw;
+
+            align-items: center;
+            gap: 13vw;
+            z-index: 10;
+
+        }
+
+
+
+
+        .m1 {
+            padding-top: 15vh;
+
+            z-index: 10;
+
+            line-height: 25px;
+
+       
+        }
+
+
+
+
+
+
+        .h3 {
+            color: rgb(255, 0, 0);
+
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 50px;
+      
+            display: inline-block;
+
+        }
+
+
+        .h2 {
+
+            align-items: center;
+            height: 3.5vh;
+            padding-left: 5%;
+            filter: brightness(105%);
+        }
+
+
+        .m3 {
+
+            align-items: center;
+            height: 3.5vh;
+            padding-left: 5%;
+            filter: brightness(150%);
+        }
+
+
+
+        .imt1 {
+
+            width: 60%;
+            filter: brightness(110%);
+        }
+
+
+
+        .m5 {
+            font-size: 3vh;
+        }
+
+
+
+        .i7 {
+
+            display: flex;
+            font-size: 2.2vh;
+            color: rgb(196, 196, 196);
+            font-weight: lighter;
+
+
+        }
+
+        .para {
+
+            font-weight: lighter;
+            color: rgb(255, 255, 255);
+            font-size: 2.5vh;
+            padding-right: 40%;
+        }
+
+
+        .i2 {
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+            font-weight: bold;
+        }
+
+
+
+        .para1::before {
+            content: "Starring:";
+            color: rgb(196, 196, 196);
+        }
+
+
+
+        .b1 {
+            color: rgb(255, 255, 255);
+            background-color: rgb(215, 0, 0);
+            height: 40px;
+            width: 155px;
+            font-size: 15px;
+            font-weight: bolder;
+            letter-spacing: .5PX;
+            cursor: pointer;
+            border: 0px;
+
+
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .b1:hover {
+            border: 1px solid rgb(255, 255, 255);
+            transition: 0.1S ease-in-out;
+
+        }
+
+        .b1:active {
+            scale: 0.95;
+        }
+
+
+
+        .i5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+
+            color: white;
+
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+
+        .i8 {
+            height: 10%;
+            display: inline;
+            position: absolute;
+            right: 30%;
+
+            filter: opacity(70%);
+
+        }
+
+        
+
+        .i6 a{
+            font-size: 20px;
+         position: absolute;
+         top: 44vh;
+         right: 40vh;
+        text-decoration: none;
+        color: white;
+
+        }
+
+ 
+        .i9 {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .i10{   text-decoration: none;
+}
+
+        .movie {
+           display: none;
+            height: auto;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+        }
+
+
+
+        #text {
+            background-color: rgba(82, 82, 82, 0.27);
+            outline: 0px;
+            border: 0px;
+            height: 4vh;
+            color: rgb(179, 179, 179);
+            border: 1px solid rgb(90, 90, 90);
+            border-radius: 10vh;
+            width: 12vw;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        #text:focus {
+            padding-left: 2vw;
+            padding-right: 1vw;
+        }
+
+
+
+        .mag {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            position: absolute;
+
+            opacity: 40%;
+            padding-left: .5vw;
+        }
+
+
+
+        .ua {
+            border: 1px solid rgb(179, 179, 179);
+            height: 3vh;
+        }
+
+        .ns {
+            display: none;
+
+        }
+
+
+        .net {
+            height: 5vh;
+        }
+
+
+
+        
+
+        .mov{position: relative;}
+
+
+
+        .vid1{
+            position: absolute;
+            width:100% ;
+       
+        z-index: 20;
+        display: none;
+        
+        animation: move 4s ease-in-out  1 alternate;
+    
+    }
+
+    @keyframes move {
+        0%{opacity: 0;}
+
+        90%{opacity: 0%;}
+        
+    }
+
+
+
+        @media (max-width:599px) {
+
+
+
+            body {
+            background-image: linear-gradient(to bottom, black, rgb(34, 34, 31), rgb(0, 0, 0));
+            padding-bottom: 5vh;
+        }
+
+
+        .movie{display: block;}
+
+
+            .container {
+                padding: 0 4vw;
+                padding-top: 20vh;
+            }
+
+
+            .i5 {
+                display: none;
+            }
+
+            .right {
+                display: none;
+            }
+
+
+            .para {
+                padding-right: 0;
+            }
+
+
+            .movie {
+                border-radius: 20px;
+            }
+
+            .ns {
+                display: block;
+                height: 6vh;
+            }
+
+            .imt1 {
+                max-width: 500px;
+                width: 100%;
+            }
+
+            .net {
+                display: none;
+            }
+
+
+
+
+            nav {
+                background-color: rgba(0, 0, 0, 0.53);
+
+                padding-bottom: 5px;
+                
+            }
+
+            #text {
+                width: 80%;
+            }
+
+            .icon ul {
+                gap: 0%;
+            }
+
+            .es {
+                padding-left: 20%;
+            }
+
+            #text:focus {
+                padding-left: 18%;
+                padding-right: 2vw;
+            }
+
+            .mag {
+                padding-left: 1.5vw;
+                padding-top: 2.5%;
+            }
+
+            .vid1{display: block;
+            width: 100%;
+            border-radius: 20px;
+           
+           
+   
+       }
+       
+        }
+
+     
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav>
+        <div class="logo"><a href="https://youtu.be/cFbnSrP5vT8?si=8jdw2skUxZzDk8cx" target="_blank">
+                <img src="ns.png" alt="" class="ns">
+                <img src="netf.png" alt="NETFLIX png" class="net"></a></div>
+        <div class="right">
+            <ul>
+                <li><a href="https://youtu.be/qMMdDZHE3f8?si=cZ0uFsg-AGY2Rynb" target="_blank">HOME</a></li>
+                <li><a href="https://youtu.be/v64T8Mk5_Tc?si=SqWmjjWs8hXZruzg" target="_blank">MOVIES</a></li>
+                <li><a href="https://youtu.be/3zMuz0CD9eI?si=pv6fSxiUrBcC9B96" target="_blank">TV SHOWS</a></li>
+                <li><a href="https://youtu.be/yvNYEEvZ8SI?si=zkFdFHKYekkwQ9lj" target="_blank">BLOG</a></li>
+                <li><a href="https://youtu.be/qySOXAJW12g?si=Dt7YzPddzHuuNfDU" target="_blank">CONTACT</a></li>
+
+
+        </div>
+
+        <div class="icon">
+            <ul>
+                <li class="es">
+                    <img src="sea.png" alt="" class="mag">
+                    <input type="text" name="" id="text" required>
+                </li>
+                <li><a href="https://youtu.be/BblraEtrFLI?si=p0hzFjU1Nv4UgzUM" target="_blank"><img src="acc1.png" alt="" class="act"></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="mov">
+<div class="vid">
+
+        <div class="img"><img src="mh (1).jpg" alt="" class="movie"></div>
+
+        <video src="Hanuman Hindi.mp4" class="vid1" autoplay controls muted loop ></video>
+        
+
+    </div>
+
+        <div class="container">
+
+
+            <div class="m1">
+
+                <div class="hello h3">|</div>
+
+                <img src="4ko1.jpg" alt="" class="h2">
+
+
+
+                <img src="kgd2.png" alt="" class="m3">
+                <br>
+                <br>
+
+                <img src="jmh.png" alt="" class="imt1">
+
+                <br><br>
+
+                <div class="item i2">
+                    <div class="m5">Hanuman (Hindi Version)</div>
+                    <br>
+                    <div class="i7">
+
+                        2024 &nbsp;| &nbsp;<div class="ua">U/A 3+ </div>&nbsp;| &nbsp;2h 30m | &nbsp;Action
+
+                    </div><br>
+
+
+                    <div class="para">
+                        Witness high-octane action, profound devotion, stunning visuals, and an epic
+                        soundtrack in this cinematic journey.
+                        <br><br>
+
+
+                        <div class="para1"> Teja Sajja, Amritha Aiyer, Vinay Rai</div>
+
+
+
+                        <br>
+
+                        <a href="https://youtu.be/H_v5oAeTeiE?si=u9-SajXoSGYL4S5Z">
+                            <button class="b1">▶ PLAY NOW</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            
+                <div class="i5">
+                <div class="i10"><a href="https://youtu.be/MKqJBhOgapM?si=GwRdqbYh3uGxgQ_e"><img src="White Play button Png.png" alt="" class="i8"></a></div>
+                 <div class="i6"> <a href="https://youtu.be/MKqJBhOgapM?si=GwRdqbYh3uGxgQ_e"> WATCH TRAILER</a> </div> 
+
+                </div>
+       
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
